@@ -15,22 +15,28 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc
     "Imageid" : "post1", 
     "Imagecaption" : "Testing", 
     "likes" : 1, 
-    "ImageUrl"  : "https://i.pinimg.com/564x/06/e0/be/06e0bea1c86e05ff0a8fd81a92b9c84b.jpg"
+    "ImageUrl"  : "https://images.unsplash.com/photo-1574169208507-84376144848b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1479&q=80"
 }
 ###
 
-POST https://localhost:3002/api/posts/upload HTTP/1.1
+POST https://localhost:3002/api/posts/delete HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QzIiwidXNlcmlkIjoiNjUwN2VmOTI0MjVmNDc0ZGQ5YTlhMGY5IiwiaWF0IjoxNjk1MDIxODQ2LCJleHAiOjE2OTUwMjU0NDZ9.AKRx9SQq8nEtRFkUapl45amviGH47FDQRQnbg-Qog6g
 
 {
-    "Imageid" : "post1", 
-    "Imagecaption" : "Testing", 
-    "likes" : 100, 
-    "ImageUrl"  : "https://i.pinimg.com/564x/06/e0/be/06e0bea1c86e05ff0a8fd81a92b9c84b.jpg"
+    "Imageid" : "post1"
 }
 ###
 
+DELETE  https://localhost:3002/api/posts/delete HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QzIiwidXNlcmlkIjoiNjUwN2VmOTI0MjVmNDc0ZGQ5YTlhMGY5IiwiaWF0IjoxNjk1MDIxODQ2LCJleHAiOjE2OTUwMjU0NDZ9.AKRx9SQq8nEtRFkUapl45amviGH47FDQRQnbg-Qog6g
+
+{
+    "Imageid" : "post1"
+}
+
+###
 
 POST https://localhost:3002/api/users/signup HTTP/1.1
 content-type: application/json

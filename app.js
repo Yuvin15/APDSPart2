@@ -18,7 +18,7 @@ const postRoutes = require('./routes/post');
 const userRoutes = require('./routes/user');
 
 // Connect to MongoDB
-mongoose.connect(connstring, options)
+mongoose.connect(connstring)
   .then(() => {
     console.log('Connected');
   })
