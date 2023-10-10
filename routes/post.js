@@ -15,6 +15,8 @@ router.get('/get', (req, res) => {
 // Create a post
 router.post('', (req, res) => {
     const post = new Post (
+
+
         {
             Imageid:      req.body.Imageid,
             Imagecaption: req.body.Imagecaption,
