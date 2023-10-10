@@ -13,19 +13,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc
 
 {
     "Imageid" : "post1", 
-    "Imagecaption" : "Testing", 
-    "likes" : 1, 
-    "ImageUrl"  : "https://images.unsplash.com/photo-1574169208507-84376144848b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1479&q=80"
+    "Imagecaption" : "Testing1", 
+    "likes" : 120, 
+    "PostSaved"  : "300"
 }
 ###
 
 GET https://localhost:3002/api/posts HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QzIiwidXNlcmlkIjoiNjUwN2VmOTI0MjVmNDc0ZGQ5YTlhMGY5IiwiaWF0IjoxNjk1MDIxODQ2LCJleHAiOjE2OTUwMjU0NDZ9.AKRx9SQq8nEtRFkUapl45amviGH47FDQRQnbg-Qog6g
-
-{
-    "Imageid" : "post1"
-}
 ###
 
 DELETE  https://localhost:3002/api/posts/delete HTTP/1.1
@@ -35,7 +31,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc
 {
     "Imageid" : "post1"
 }
-
 ###
 
 POST https://localhost:3002/api/users/signup HTTP/1.1
@@ -52,6 +47,6 @@ Content-Type: application/json
 
 {
  "username": "test1",
- "password": "bestpassword1"
+ "password": "bestpassword2"
 }
 ###

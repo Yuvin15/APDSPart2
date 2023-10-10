@@ -3,14 +3,23 @@ const router = express.Router();
 const Post = require('../models/post');
 
 // Get all posts
-router.get('/get', (req, res) => {
-    Post.find().then((posts) => {
-        res.json({
-            message: 'Posts Found',
-            posts: posts
-        });
+router.get('', (req, res) => {
+    Post.find({}).then((posts) => {
+        if (posts.length > 0) {
+            res.json({
+                message: 'Posts Found',
+                posts: posts
+            });
+        } else {
+            res.json({
+                message: 'No Posts Found'
+            });
+        }
+    }).catch((error) => {
+        res.status(500).json({ message: error.message });
     });
 });
+
 
 // Create a post
 router.post('', (req, res) => {
@@ -21,7 +30,7 @@ router.post('', (req, res) => {
             Imageid:      req.body.Imageid,
             Imagecaption: req.body.Imagecaption,
             likes:        req.body.likes,
-            ImageUrl:     req.body.ImageUrl    
+            PostSaved:     req.body.PostSaved    
         }
     )
     post.save();
