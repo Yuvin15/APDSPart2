@@ -1,39 +1,39 @@
-GET http://localhost:3002/api HTTP/1.1
+GET http://localhost:3003/api HTTP/1.1
 ###
 
-GET https://localhost:3002/api/posts HTTP/1.1
+GET https://localhost:3003/api/posts HTTP/1.1
 ###
 
-GET https://localhost:3002/api HTTP/1.1
+GET https://localhost:3003/api HTTP/1.1
 ### 
 
-POST https://localhost:3002/api/posts HTTP/1.1
+POST https://localhost:3003/api/posts HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QzIiwidXNlcmlkIjoiNjUwN2VmOTI0MjVmNDc0ZGQ5YTlhMGY5IiwiaWF0IjoxNjk1MDIxODQ2LCJleHAiOjE2OTUwMjU0NDZ9.AKRx9SQq8nEtRFkUapl45amviGH47FDQRQnbg-Qog6g
 
 {
-    "Imageid" : "post1", 
-    "Imagecaption" : "Testing1", 
-    "likes" : 120, 
-    "PostSaved"  : "300"
+    "Imageid" : "post3", 
+    "Imagecaption" : "Testing3", 
+    "likes" : 1202, 
+    "PostSaved"  : "30450"
 }
 ###
 
-GET https://localhost:3002/api/posts HTTP/1.1
+GET https://localhost:3003/api/posts HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QzIiwidXNlcmlkIjoiNjUwN2VmOTI0MjVmNDc0ZGQ5YTlhMGY5IiwiaWF0IjoxNjk1MDIxODQ2LCJleHAiOjE2OTUwMjU0NDZ9.AKRx9SQq8nEtRFkUapl45amviGH47FDQRQnbg-Qog6g
 ###
 
-DELETE  https://localhost:3002/api/posts/delete HTTP/1.1
+DELETE  https://localhost:3003/api/posts/delete HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QzIiwidXNlcmlkIjoiNjUwN2VmOTI0MjVmNDc0ZGQ5YTlhMGY5IiwiaWF0IjoxNjk1MDIxODQ2LCJleHAiOjE2OTUwMjU0NDZ9.AKRx9SQq8nEtRFkUapl45amviGH47FDQRQnbg-Qog6g
 
 {
-    "Imageid" : "post1"
+    "Imageid" : "post3"
 }
 ###
 
-POST https://localhost:3002/api/users/signup HTTP/1.1
+POST https://localhost:3003/api/users/signup HTTP/1.1
 content-type: application/json
 
 {
@@ -42,11 +42,11 @@ content-type: application/json
 }
 ###
 
-POST https://localhost:3002/api/users/login HTTP/1.1
+POST https://localhost:3003/api/users/login HTTP/1.1
 Content-Type: application/json
 
 {
  "username": "test1",
- "password": "bestpassword2"
+ "password": "bestpassword1"
 }
 ###
