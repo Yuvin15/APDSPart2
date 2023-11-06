@@ -3,7 +3,7 @@ const app = express();
 const urlprefix = '/api';
 const mongoose = require('mongoose');
 const fs = require('fs');
-const cert = fs.readFileSync('keys/certificate.pem');
+const cert = fs.readFileSync('keys/localhost.pem');
 
 // SSL Options
 const options = {
