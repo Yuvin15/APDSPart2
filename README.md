@@ -1,4 +1,4 @@
-# APDSPart2
+# First ever Full Stack website, Backend
 
 ## I messed up and removed my readme from the project when I was pushing. So I just put my references because this is just the backend code for the frontend(https://github.com/Yuvin15/APDS_Final.git) and it would be better if you run the frontend while running the backend.
 
